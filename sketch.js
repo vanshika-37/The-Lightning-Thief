@@ -17,7 +17,7 @@ function preload() {
   percyImg = loadImage('img_percy.png');
   enemyImg = loadImage('img_enemy.png');
   dropImg = loadImage('drop.png');
-  enemySound = loadSound('/EnemyWasHit.wav');
+  enemySound = loadSound('EnemyWasHit.wav');
   dropSound = loadSound('PlayerDidFire.wav');
   gameOverSound = loadSound('gameOver.wav');
   victorySound = loadSound('victory.mp3');
