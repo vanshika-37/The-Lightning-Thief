@@ -14,14 +14,14 @@ var bulletsLeft = 40;
 var playing = true;
 
 function preload() {
-  percyImg = loadImage('images/img_percy.png');
-  enemyImg = loadImage('images/img_enemy.png');
-  dropImg = loadImage('images/drop.png');
-  enemySound = loadSound('sounds/EnemyWasHit.wav');
-  dropSound = loadSound('sounds/PlayerDidFire.wav');
-  gameOverSound = loadSound('sounds/gameOver.wav');
-  victorySound = loadSound('sounds/victory.mp3');
-  gameSound = loadSound('sounds/game_sound.mp3');
+  percyImg = loadImage('img_percy.png');
+  enemyImg = loadImage('img_enemy.png');
+  dropImg = loadImage('drop.png');
+  enemySound = loadSound('/EnemyWasHit.wav');
+  dropSound = loadSound('PlayerDidFire.wav');
+  gameOverSound = loadSound('gameOver.wav');
+  victorySound = loadSound('victory.mp3');
+  gameSound = loadSound('game_sound.mp3');
 }
 
 function setup() {
