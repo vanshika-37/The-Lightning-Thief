@@ -30,15 +30,11 @@ function setup() {
   gameSound.loop();
 
   percy = new Percy();
+for (var j = 0; j < 3; j++) {
   for (var i = 0; i < 6; i++) {
-    enemys[i] = new Enemy(((width - 570) / 2) + i * 80 + 80, 80);
+    enemys[i + j * 6] = new Enemy(((width - 570) / 2) + i * 80 + 80, 80 + j * 80);
   }
-  for (var i = 6; i < 12; i++) {
-    enemys[i] = new Enemy(((width - 570) / 2) + (i - 6) * 80 + 80, 160);
-  }
-  for (var i = 12; i < 18; i++) {
-    enemys[i] = new Enemy(((width - 570) / 2) + (i - 12) * 80 + 80, 240);
-  }
+}
 }
 
 function draw() {
@@ -75,6 +71,7 @@ function draw() {
 
       if (gameOver) {
         noLoop();
+        gameSound.stop();
         gameOverSound.play();
         fill(255, 255, 255);
         textSize(30);
@@ -111,6 +108,7 @@ function draw() {
           fill(255, 255, 255);
           textSize(30);
           textAlign(CENTER);
+          gameSound.stop();
           text("Looks like the sea does not like to be restrained.", width / 2, height / 2);
           victorySound.play();
           noLoop();
